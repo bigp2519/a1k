@@ -1,6 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^(www\.)?atom1klfg\.com$ [NC]
-RewriteRule ^(.*)$ https://atom1klfg.com/$1 [L,R=301]
-</IfModule>
