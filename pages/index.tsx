@@ -53,6 +53,7 @@ const Home: NextPage = () => {
                 brandColor: '#FF4FFF',
                 highlightColor: 'rgba(255, 79, 255, 0.1)',
               }}
+              apiURL="/api/skip-proxy?url="
             />
           </div>
         );
