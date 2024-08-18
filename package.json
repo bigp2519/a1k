@@ -1,0 +1,26 @@
+{
+  "name": "a1k-1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3003",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@skip-go/widget": "^2.4.3",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/ws": "^8.5.12",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "typescript": "^5"
+  }
+}
