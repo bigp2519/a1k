@@ -53,7 +53,11 @@ const Home: NextPage = () => {
                 brandColor: '#FF4FFF',
                 highlightColor: 'rgba(255, 79, 255, 0.1)',
               }}
-              apiURL="/api/skip-proxy?url="
+              onWalletConnected={(data) => console.log('Wallet connected:', data)}
+              onWalletDisconnected={() => console.log('Wallet disconnected')}
+              onTransactionBroadcasted={(data) => console.log('Transaction broadcasted:', data)}
+              onTransactionComplete={(data) => console.log('Transaction complete:', data)}
+              onTransactionFailed={(error) => console.error('Transaction failed:', error)}
             />
           </div>
         );
