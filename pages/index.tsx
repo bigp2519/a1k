@@ -94,10 +94,10 @@ const Home: NextPage = () => {
         <div className={styles.buyOptions}>
           <h3>Where to buy:</h3>
           <div className={styles.buttonContainer}>
-            <a href="https://app.osmosis.zone/" className={styles.buyButton}>Osmosis</a>
-            <a href="https://coinhall.org/" className={styles.buyButton}>Coinhall</a>
-            <a href="https://astroport.fi/" className={styles.buyButton}>Astroport</a>
-            <a href="https://twitter.com/isaac_defi" className={styles.buyButton}>Isaac</a>
+            <a href="https://app.osmosis.zone/?from=ATOM&sellOpen=false&buyOpen=false&to=ATOM1KLFG" className={styles.buyButton}>Osmosis</a>
+            <a href="https://coinhall.org/neutron/neutron1dqanamhpvuljprfmwjxww0w3r5qd66zz3glkh8lxszw85zkdn0hq630d58" className={styles.buyButton}>Coinhall</a>
+            <a href="https://app.astroport.fi/swap?from=ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9&to=factory/neutron13lkh47msw28yynspc5rnmty3yktk43wc3dsv0l/ATOM1KLFG" className={styles.buyButton}>Astroport</a>
+            <a href="https://t.me/newtonneutron/15291" className={styles.buyButton}>Isaac</a>
           </div>
         </div>
 
