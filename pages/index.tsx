@@ -1,40 +1,11 @@
 import { NextPage } from 'next';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { SwapWidget } from '@skip-go/widget';
 import styles from '../styles/Home.module.css';
+import AtomVisualization from '../components/AtomVisualization';
 
 const Home: NextPage = () => {
   const [activeTab, setActiveTab] = useState('swap');
-
-  useEffect(() => {
-    const createStars = () => {
-      const starsContainer = document.createElement('div');
-      starsContainer.className = 'stars';
-      
-      for (let i = 0; i < 200; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 10}s`;
-        star.style.setProperty('--twinkle-duration', `${Math.random() * 5 + 5}s`);
-        starsContainer.appendChild(star);
-      }
-
-      document.body.appendChild(starsContainer);
-    };
-
-    createStars();
-
-    const glow = document.createElement('div');
-    glow.className = 'glow';
-    document.body.appendChild(glow);
-
-    return () => {
-      document.body.removeChild(document.querySelector('.stars')!);
-      document.body.removeChild(document.querySelector('.glow')!);
-    };
-  }, []);
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -43,8 +14,10 @@ const Home: NextPage = () => {
           <div className={styles.widgetContainer}>
             <SwapWidget
               defaultRoute={{
-                srcChainID: 'osmosis-1',
-                srcAssetDenom: 'ibc/1480b8fd20ad5fcae81ea87584d269547dd4d436843c1d20f15e00eb64743ef4',
+                srcChainID: 'cosmoshub-4',
+                srcAssetDenom: 'uatom',
+                destChainID: 'neutron-1',
+                destAssetDenom: 'factory/neutron13lkh47msw28yynspc5rnmty3yktk43wc3dsv0l/ATOM1KLFG'
               }}
               theme={{
                 backgroundColor: 'rgba(0, 0, 0, 0.7)',
@@ -86,7 +59,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.backgroundImage} />
+      <AtomVisualization />
       <div className={styles.content}>
         <h1 className={styles.title}>$ATOM1KLFG</h1>
         <p className={styles.subtitle}>ATOM to $1,000 LFG!!!</p>
