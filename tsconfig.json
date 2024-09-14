@@ -15,6 +15,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "skip-go.d.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "skip-go.d.ts",
+    "types/three-stdlib.d.ts"
+  ],
   "exclude": ["node_modules"]
 }
