@@ -78,19 +78,20 @@
 .widgetContainer,
 .statsContainer,
 .infoContainer {
-  width: 100%;
-  max-width: 450px;
+  width: 90%; /* Reduce the overall width */
+  max-width: 500px; /* Adjust max width */
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 0 20px rgba(255, 79, 255, 0.3);
+  margin-left: 2%; /* Move the entire container to the left */
 }
 
 .content {
   position: relative;
   z-index: 1;
-  max-width: 50%;
-  margin-left: 5%;
+  max-width: 40%;
+  margin-left: 0%; /* Reset to align content properly */
 }
 
 .tradingViewWidget {
