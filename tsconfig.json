@@ -20,7 +20,7 @@
     "**/*.ts",
     "**/*.tsx",
     "skip-go.d.ts",
-    "types/three-stdlib.d.ts"
+    "types/**/*.d.ts"
   ],
   "exclude": ["node_modules"]
 }
