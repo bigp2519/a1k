@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import { ShaderMaterial } from 'three';
 
 const AtomVisualization: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -10,7 +11,6 @@ const AtomVisualization: React.FC = () => {
   useEffect(() => {
     if (!mountRef.current) return;
 
-    // Store the current value of mountRef to avoid changes between renders
     const mountElement = mountRef.current;
 
     const scene = new THREE.Scene();
@@ -24,10 +24,10 @@ const AtomVisualization: React.FC = () => {
 
     // Nucleus
     const nucleusGeometry = new THREE.SphereGeometry(0.5, 64, 64);
-    const nucleusMaterial = new THREE.ShaderMaterial({
+    const nucleusMaterial = new ShaderMaterial({
       uniforms: {
         time: { value: 0 },
-        color: { value: new THREE.Color(0x00FFFF) }
+        color: { value: new THREE.Color(0x00ffff) }
       },
       vertexShader: `
         varying vec2 vUv;
