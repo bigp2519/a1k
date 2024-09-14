@@ -10,13 +10,15 @@ const AtomVisualization: React.FC = () => {
   useEffect(() => {
     if (!mountRef.current) return;
 
+    // Store the current value of mountRef to avoid changes between renders
+    const mountElement = mountRef.current;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
+    mountElement.appendChild(renderer.domElement);
 
-    // Create a group for the entire atom
     const atomGroup = new THREE.Group();
     scene.add(atomGroup);
 
@@ -209,7 +211,6 @@ const AtomVisualization: React.FC = () => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      const mountElement = mountRef.current;
       if (mountElement) {
         mountElement.removeChild(renderer.domElement);
       }
