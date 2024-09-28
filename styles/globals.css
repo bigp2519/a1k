@@ -1,48 +1,29 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 20, 0, 50;
-  --background-mid-rgb: 60, 10, 100;
-  --background-end-rgb: 0, 20, 60;
+  /* ... other variables ... */
+  --background-start-rgb: 20, 0, 0;
+  --background-mid-rgb: 60, 10, 0;
+  --background-end-rgb: 0, 20, 0;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
-    #ff00ff33 0deg,
-    #00ffff33 55deg,
-    #ff4fff33 120deg,
-    #8a2be233 160deg,
+    #9e011d33 0deg,
+    #e5821d33 55deg,
+    #efb51933 120deg,
+    #9e011d33 160deg,
     transparent 360deg
   );
   --secondary-glow: radial-gradient(
     rgba(255, 255, 255, 0.2),
-    rgba(1, 65, 255, 0.2)
+    rgba(158, 1, 29, 0.2)
   );
 
-  --tile-start-rgb: 2, 13, 46;
-  --tile-end-rgb: 2, 5, 19;
-  --tile-border: conic-gradient(
-    #ffffff80,
-    #ffffff40,
-    #ffffff30,
-    #ffffff20,
-    #ffffff10,
-    #ffffff10,
-    #ffffff80
-  );
+  /* ... other variables ... */
+  --callout-rgb: 40, 20, 20;
+  --callout-border-rgb: 208, 108, 108;
+  --card-rgb: 150, 100, 100;
+  --card-border-rgb: 255, 200, 200;
 
-  --callout-rgb: 20, 20, 40;
-  --callout-border-rgb: 108, 108, 208;
-  --card-rgb: 100, 100, 150;
-  --card-border-rgb: 200, 200, 255;
-
-  --star-color: #ffffff;
-  --star-size: 2px;
-  --glow-color: rgba(255, 255, 255, 0.1);
+  --glow-color: rgba(158, 1, 29, 0.1);
 }
 
 * {
@@ -101,8 +82,8 @@ body::after {
   bottom: 0;
   z-index: -1;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(255, 0, 255, 0.3) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.3) 0%, transparent 40%);
+    radial-gradient(circle at 20% 30%, rgba(158, 1, 29, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(229, 130, 29, 0.3) 0%, transparent 40%);
   filter: blur(60px);
   opacity: 0.5;
 }
@@ -179,10 +160,10 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ff00ff, #00ffff);
+  background: linear-gradient(180deg, #9e011d, #e5821d);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff4fff, #4fffff);
+  background: linear-gradient(180deg, #b30121, #ff9421);
 }

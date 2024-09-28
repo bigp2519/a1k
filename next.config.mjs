@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   assetPrefix: '/',
-  swcMinify: false, // Disable SWC minification
+  swcMinify: true,
   async rewrites() {
     return [
       {
